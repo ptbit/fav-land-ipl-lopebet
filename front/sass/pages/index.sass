@@ -54,6 +54,7 @@ body
     width: 100%
     height: 100%
     background: url('../img/lights.svg') no-repeat 50% 50%/cover
+    z-index: 3
   &__header
     position: relative
     display: flex
@@ -62,7 +63,7 @@ body
     max-width: 1920px
     padding: 30px 40px 0
     margin: 0 auto
-    z-index: 2
+    z-index: 5
   &__buttons
     display: flex
     gap: 16px
@@ -90,8 +91,7 @@ body
       color: $color-violet
       transition: all .5s ease
       &:hover
-        background-color: transparent
-        color: $color-orange
+        background-color: #f5d49d
  
 
   &__bonus
@@ -117,7 +117,7 @@ body
     background: url('../img/welcome.svg') no-repeat 50% 50%/cover
     display: flex
     align-items: center
-    // z-index: 2
+    z-index: 4
   &__title
     color: $color-white
     text-align: center
@@ -143,16 +143,47 @@ body
     justify-content: center
     align-items: center
     border-radius: 144px
-    background: linear-gradient(180deg, #DC9133 0.21%, #D79236 23.78%, #FCC054 51.21%, #FDF08B 100.21%)
     color: $color-black
     font-family: $font-roadRadio-bold
     font-size: 36px
     font-weight: 700
     text-transform: uppercase
-    transition: all .3s linear
-
+    position: relative
+    &::before
+      content: "Get Bonus"
+      position: absolute
+      top: 0
+      right: 0
+      width: 100%
+      height: 100%
+      display: flex
+      justify-content: center
+      align-items: center
+      border-radius: 144px
+      background: linear-gradient(180deg, #DC9133 0.21%, #D79236 23.78%, #FCC054 51.21%, #FDF08B 100.21%)
+      transition: all 0.3s ease
+    &::after
+      content: "Get Bonus"
+      position: absolute
+      top: 0
+      right: 0
+      width: 100%
+      height: 100%
+      display: flex
+      justify-content: center
+      align-items: center
+      border-radius: 144px
+      background: linear-gradient(0deg, #DC9133 0.21%, #D79236 23.78%, #FCC054 51.21%, #FDF08B 100.21%)
+      opacity: 0
+      visibility: hidden
+      transition: all 0.3s ease
     &:hover
-      color: red
+      &::before
+        opacity: 0
+        visibility: hidden
+      &::after
+        opacity: 1
+        visibility: visible
   &__partners
     max-width: 513px
     margin-inline: auto
@@ -164,3 +195,21 @@ body
     max-width: 40%
     max-height: calc(100vh - 106px)
     z-index: 4
+    animation: playerFloat 2s ease-in-out infinite
+
+.pulse-btn
+  animation: 2s infinite pulse-btn ease-in-out
+
+@keyframes pulse-btn
+  0%
+    transform: scale(1)
+  50%
+    transform: scale(1.07)
+  100%
+    transform: scale(1)
+
+@keyframes playerFloat
+  0%, 100%
+    transform: translate(0, 0) 
+  50%
+    transform: translate(10px, 15px) 
