@@ -7,10 +7,10 @@ $color-violet: #4E0154
 $color-black: #0C1222
 $color-white: #F0F0F0
 $dots-opacity: 0.5
+
 body
   overscroll-behavior: none
   font-family: $font-roadRadio-black
-  overflow: hidden
 
   img
     max-width: 100%
@@ -18,11 +18,11 @@ body
 
 .land
   background: radial-gradient(74.32% 100% at 50% 0%, #281880 0%, #0E082F 100%)
-  width: 100%
-  height: 100%
+  width: 100vw
+  height: 100vh
   -webkit-tap-highlight-color: transparent
-  overscroll-behavior: none
   position: relative
+  overflow: hidden
   
   &::before
     content: ''
@@ -62,6 +62,7 @@ body
     max-width: 1920px
     padding: 30px 40px 0
     margin: 0 auto
+    z-index: 2
   &__buttons
     display: flex
     gap: 16px
@@ -94,6 +95,8 @@ body
  
 
   &__bonus
+    position: relative
+    z-index: 44
     margin-left: 108px
     max-width: 706px
     display: flex
@@ -114,7 +117,7 @@ body
     background: url('../img/welcome.svg') no-repeat 50% 50%/cover
     display: flex
     align-items: center
-
+    z-index: 2
   &__title
     color: $color-white
     text-align: center
@@ -146,6 +149,10 @@ body
     font-size: 36px
     font-weight: 700
     text-transform: uppercase
+    transition: all .3s linear
+
+    &:hover
+      color: red
   &__partners
     max-width: 513px
     margin-inline: auto
@@ -153,122 +160,7 @@ body
   &__player
     position: absolute
     bottom: 0
-    right: 230px
+    right: 270px
     max-width: 40%
     max-height: 88%
-
-
-
-
-
-
-// $blue: #005
-// $magenta: #FF267E
-// $white: #fff
-
-// $font-suisseIntl-semiBold: SuisseIntl-SemiBold, sans-serif //600
-// $font-suisseIntl-regular: SuisseIntl-Regular, sans-serif //400
-
-// body
-//   overscroll-behavior: none
-//   img
-//     max-width: 100%
-//     height: auto
-// .wrapper
-//   width: 100%
-//   height: 100%
-//   -webkit-tap-highlight-color: transparent
-//   overscroll-behavior: none
-//   display: flex
-// .offer
-//   position: relative
-//   width: 50%
-//   height: calc(var(--vh, 1vh) * 100)
-//   overflow: hidden
-//   background: url("..img/bg-960.jpg") no-repeat 50% 50%/cover
-//   @media screen and (max-width: 1440px)
-//     background: url("..img/bg-720.jpg") no-repeat 50% 50%/cover
-//   @media screen and (max-width: 1280px)
-//     background: url("..img/bg-640.jpg") no-repeat 50% 50%/cover
-//   @media screen and (max-width: 1260px)
-//     background: url("..img/bg-512.jpg") no-repeat 50% 50%/cover
-
-//   &__players
-//     position: absolute
-//     bottom: 0
-//     margin-bottom: -4px
-//   &__bottom
-//     position: absolute
-//     bottom: 130px
-//     display: flex
-//     flex-direction: column
-//     justify-content: center
-//     align-items: center
-//     color: $white
-//     font-family: $font-suisseIntl-semiBold
-//     padding: 11px 97px 20px
-//     width: 100%
-//     left: 50%
-//     transform: translateX(-50%)
-//   &__title
-//     text-align: center
-//     text-shadow: 0px 3.815px 0px #000
-//     font-size: 58px
-//     font-style: normal
-//     line-height: normal
-//     letter-spacing: 3.19px
-//     text-transform: uppercase
-//     margin-bottom: 13px
-//   &__container
-//     position: relative
-//     display: flex
-//     width: 100%
-//   &__price
-//     position: relative
-//     width: 50%
-//     padding: 10px 10px 5px 5px
-
-//     display: flex
-//     align-items: baseline
-//     justify-content: center
-//     text-wrap: nowrap
-//     text-transform: uppercase
-//     font-size: 58px
-//     letter-spacing: 3.19px
-//     background-color: $blue
-//     &::before
-//       content: 'до'
-//       position: relative
-//       margin-right: 5px
-//       font-size: 27px
-//       letter-spacing: 1.485px
-//   &__plus
-//     width: 100%
-//     height: 50%
-//     background-image: url("..img/plus.svg")
-//     background-size: contain
-//     background-repeat: no-repeat
-//     background-position: center
-//     position: absolute
-//     top: 50%
-//     left: 50%
-//     transform: translate(-50%, -50%)
-//   &__spins
-//     background-color: $magenta
-//     width: 50%
-//     padding: 10px 26px 5px
-//     display: flex
-//     align-items: baseline
-//     text-transform: uppercase
-//     justify-content: center
-//     font-size: 58px
-//     letter-spacing: 3.19px
-
-//   &__details
-//     margin-top: 23px
-//     text-transform: uppercase
-//     text-shadow: 0px 1.908px 0px #000
-//     font-size: 11px
-//     line-height: 160%
-//     letter-spacing: 0.605px
-//     font-family: $font-suisseIntl-regular
+    z-index: 4
