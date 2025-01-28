@@ -53,7 +53,7 @@
   .land
     &__header
       height: 66px
-      padding-top: 20px
+      padding: 20px 30px 0
     &__buttons
       font-size: 17px
       padding-block: 4px
@@ -63,10 +63,28 @@
   .land
     &__header
       height: 56px
-      padding: 18px 30px 0
       width: 100%
+      padding: 18px 30px 0
     &__buttons
+      gap: 8px
       font-size: 14px
       padding-block: 3px
     &__button
       padding-inline: 16px
+
+@media screen and (max-width: 767px)
+  .land
+    &__header
+      padding: 18px 20px 0
+    &__buttons
+      height: 100%
+
+@media screen and (max-width: 374px)
+  .land
+    &__header
+      padding-inline: 10px 
+    &__logo
+      height: 90%
+    &__buttons
+      padding-block: 2px
+      gap: 5px
