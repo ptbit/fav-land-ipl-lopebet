@@ -66,14 +66,16 @@ body
     z-index: 5
   &__buttons
     display: flex
+    align-items: center
     gap: 16px
     font-family: $font-roboto-condensed
-
+    padding-block: 6px
+    font-size: 28px
   &__button
     border-radius: 4px
     border: 2px solid #FCC054
     text-align: center
-    font-size: 28px
+    font-size: invert
     font-weight: 700
     line-height: normal
     text-transform: uppercase
@@ -82,6 +84,7 @@ body
     align-items: center
     color: $color-orange
     transition: all .5s ease
+    height: 100%
     &:hover
       background-color: $color-orange
       color: $color-violet
