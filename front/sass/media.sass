@@ -118,3 +118,56 @@
     &__bonus
       margin-left: 50px
 
+
+//TABLET
+@media screen and (max-width: 768px) and (max-height: 1024px)
+  .land
+    background: url('../img/bg-768.png') no-repeat 50% 50%/cover
+    display: flex
+    flex-direction: column-reverse
+    justify-content: start
+
+    &::after
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 0
+      right: 0
+      height: 150px
+      background: linear-gradient(180deg, rgba(8, 7, 26, 0.00) 0%, #08071A 100%)
+    &__welcome
+      border: 1px dashed yellow
+      position: static
+      margin-top: 28px
+      margin-inline: auto
+      max-width: 540px
+      height: 100%
+      transform: none
+      background-image: url("../img/welcome.svg")
+      background-position: top
+      background-repeat: no-repeat
+      background-size: contain
+      padding: 40px 26px
+      gap: 8px
+      z-index: 2
+    &__title
+      font-size: 56px
+    &__subtitle
+      font-size: 32px
+    &__bonus
+      margin-left: 0
+      height: 100%
+      width: 100%
+    &__link
+      margin-top: auto
+    &__player
+      max-width: 74%
+      width: 100%
+      max-height: 72vh
+      right: 50%
+      transform: translateX(50%)
+      z-index: 0
+      border: 1px dashed red
+
+    &__partners
+      width: 100%

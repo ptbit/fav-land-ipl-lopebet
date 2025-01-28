@@ -2,10 +2,12 @@ $font-roadRadio-regular: RoadRadio-Regular, sans-serif //400
 $font-roadRadio-bold: RoadRadio-Bold, sans-serif //700
 $font-roadRadio-black: RoadRadio-Black, sans-serif //900
 $font-roboto-condensed: RobotoCondensed-Bold, sans-serif //700
+
 $color-orange: #FCC054
 $color-violet: #4E0154
 $color-black: #0C1222
 $color-white: #F0F0F0
+
 $dots-opacity: 0.5
 $btn-animation-speed: 1.2s
 $player-animation-speed: 4s
@@ -13,7 +15,6 @@ $player-animation-speed: 4s
 body
   overscroll-behavior: none
   font-family: $font-roadRadio-black
-
   img
     max-width: 100%
     height: auto
@@ -26,14 +27,12 @@ body
   position: relative
   overflow: hidden
   &__header
-    position: relative
     display: flex
     justify-content: space-between
     height: 106px
     max-width: 1920px
     padding: 30px 40px 0
     margin: 0 auto
-    z-index: 5
   &__buttons
     display: flex
     align-items: center
@@ -58,18 +57,14 @@ body
     &:hover
       background-color: $color-orange
       color: $color-violet
-      
     &.active
       background-color: $color-orange
       color: $color-violet
       transition: all .5s ease
       &:hover
         background-color: #f5d49d
- 
-
   &__bonus
-    position: relative
-    z-index: 44
+    // position: relative
     margin-left: 108px
     max-width: 706px
     display: flex
@@ -79,7 +74,6 @@ body
     display: flex
     flex-direction: column
     gap: 12px
-
   &__welcome
     position: absolute
     left: 170px
@@ -90,7 +84,6 @@ body
     background: url('../img/welcome.svg') no-repeat 50% 50%/cover
     display: flex
     align-items: center
-    z-index: 4
   &__title
     color: $color-white
     text-align: center
@@ -167,11 +160,10 @@ body
     right: 270px
     max-width: 40%
     max-height: calc(100vh - 106px)
-    z-index: 4
-    animation: playerFloat $player-animation-speed ease-in-out infinite
+    // animation: playerFloat $player-animation-speed ease-in-out infinite
 
 .pulse-btn
-  animation: $btn-animation-speed infinite pulse-btn ease-in-out
+  // animation: $btn-animation-speed infinite pulse-btn ease-in-out
 
 @keyframes pulse-btn
   0%
