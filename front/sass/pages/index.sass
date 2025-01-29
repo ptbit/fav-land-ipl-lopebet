@@ -161,21 +161,25 @@ body
     right: 270px
     max-width: 40%
     max-height: calc(100vh - 106px)
-    // animation: playerFloat $player-animation-speed ease-in-out infinite
+    animation: playerFloat $player-animation-speed ease-in-out infinite
 
 .pulse-btn
-  // animation: $btn-animation-speed infinite pulse-btn ease-in-out
+  animation: $btn-animation-speed infinite pulse-btn ease-in-out
 
 @keyframes pulse-btn
-  0%
+  0%, 100%
     transform: scale(1)
   50%
     transform: scale(1.07)
-  100%
-    transform: scale(1)
 
 @keyframes playerFloat
   0%, 100%
-    transform: translate(0, 0) 
+    transform: translateY(0) 
   50%
-    transform: translate(10px, 15px) 
+    transform: translateY(10px) 
+
+@keyframes playerFloatY
+  0%, 100%
+    transform: translate(50%, 0) 
+  50%
+    transform: translate(50%, 10px) 
