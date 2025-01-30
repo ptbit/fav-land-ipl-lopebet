@@ -19,8 +19,12 @@ body
   img
     max-width: 100%
     height: auto
-
+.main-link
+  position: fixed
+  width: 100%
+  height: 100%
 .land
+  pointer-events: none
   background: url('../img/bg-1920.jpg') no-repeat 50% 50%/cover
   width: 100%
   height: 100%
@@ -56,6 +60,8 @@ body
     color: $color-orange
     transition: all .5s ease
     height: 100%
+    z-index: 3
+    pointer-events: initial
     &:hover
       background-color: $color-orange
       color: $color-violet
@@ -117,6 +123,7 @@ body
     font-weight: 700
     text-transform: uppercase
     position: relative
+    pointer-events: initial
     &::before
       content: "Get Bonus"
       position: absolute
