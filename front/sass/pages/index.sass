@@ -13,6 +13,7 @@ $btn-animation-speed: 1.2s
 $player-animation-speed: 4s
 
 body
+  background-color: #1f1168
   overscroll-behavior: none
   font-family: $font-roadRadio-black
   img
@@ -21,8 +22,8 @@ body
 
 .land
   background: url('../img/bg-1920.jpg') no-repeat 50% 50%/cover
-  width: 100vw
-  height: 100vh
+  width: 100%
+  height: 100%
   -webkit-tap-highlight-color: transparent
   position: relative
   overflow: hidden
@@ -160,7 +161,7 @@ body
     bottom: 0
     right: 270px
     max-width: 40%
-    max-height: calc(100vh - 106px)
+    max-height: calc(100% - 106px)
     animation: playerFloat $player-animation-speed ease-in-out infinite
 
 .pulse-btn
