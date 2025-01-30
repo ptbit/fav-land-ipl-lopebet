@@ -142,6 +142,10 @@
     &__player
       min-width: 50%
       right: 50px
+@media screen and (max-width: 1368px) and (max-height: 912px) // ipad pro
+  .land
+    &__player
+      min-width: 46%
 @media screen and (max-width: 1368px) and (max-height: 768px) 
   .land
     &__player
@@ -284,6 +288,14 @@
       transform: translateY(-50%) scale(0.65)
       left: 110px
       transform-origin: left
+@media screen and (max-width: 1042px) and (max-height: 768px)
+  .land
+    &__welcome
+      left: 90px
+@media screen and (max-width: 970px) and (max-height: 712px)
+  .land
+    &__welcome
+      left: 50px
 @media screen and (max-width: 954px) and (max-height: 768px)
   .land
     &__welcome
@@ -458,7 +470,9 @@
 @media screen and (max-width: 740px) and (max-height: 360px) and (orientation: landscape)
   .land
     &__player
-      right: 70px // 100 to 70
+      right: 100px // 100 to 70
+      max-width: 29%
+      min-width: 29%
 @media screen and (max-width: 736px) and (max-height: 414px) and (orientation: landscape) //ip6/7/8+ pixel2
   .land
     &__player
